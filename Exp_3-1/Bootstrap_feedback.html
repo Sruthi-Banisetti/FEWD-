@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #c2d6eb; /* Light Gray Background */
+        }
+        .container {
+            max-width: 600px;
+            background: rgb(241, 242, 244);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(3, 3, 3, 0.1);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 class="text-center text-primary">Feedback Form</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone (optional):</label>
+                <input type="tel" class="form-control" id="phone" name="phone">
+            </div>
+
+            <div class="mb-3">
+                <label for="rating" class="form-label">Rating:</label>
+                <select id="rating" name="rating" class="form-select" required>
+                    <option value="">--Select Rating--</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="questions" class="form-label">Any Questions regarding product or service:</label>
+                <textarea id="questions" name="questions" class="form-control" rows="4"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="comments" class="form-label">Additional Comments (optional):</label>
+                <textarea id="comments" name="comments" class="form-control" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
