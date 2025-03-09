@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        .container {
+            max-width: 1000px;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .right-section {
+            padding-left: 0;
+        }
+        h1 {
+            color: #007bff;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        h5 {
+            margin-bottom: 15px;
+        }
+        hr {
+            border-top: 2px solid #007bff;
+            width: 50px;
+            margin-left: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Section with Image Left and Name Right -->
+        <div class="header">
+            <img src="profile.jpg" alt="Profile Image" class="profile-img">
+            <div>
+                <h1>Sruthi Banisetti</h1>
+                <h5 class="text-muted">Aspiring Engineer</h5>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>About Me</h3>
+        <p>Hello, I'm Sruthi Banisetti, an aspiring engineer eager to apply technical skills in a dynamic and challenging environment.</p>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>Java, Python, C++, C</li>
+            <li>HTML, CSS, React.js, Node.js, Express.js</li>
+            <li>MongoDB, MySQL</li>
+            <li>Time Management, Fast Learner, Problem Solving</li>
+        </ul>
+
+        <h3>Projects</h3>
+        <ul>
+            <li><strong>GLYCO PREDICT:</strong> A deep learning-based diabetes prediction system using TensorFlow, Flask, and MySQL.</li>
+            <li><strong>JARVIS AI ASSISTANT:</strong> A Python-based voice assistant with a PyQt GUI for automation and system control.</li>
+        </ul>
+
+        <h3>Contact</h3>
+        <ul>
+            <li>Email: bsruthi2005@gmail.com</li>
+            <li>GitHub: <a href="https://github.com/Sruthi-Banisetti" target="_blank">github.com/Sruthi-Banisetti</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/sruthi-banisetti" target="_blank">linkedin.com/in/sruthi-banisetti</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
