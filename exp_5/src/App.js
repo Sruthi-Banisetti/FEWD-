@@ -1,15 +1,37 @@
+import React, { useState, useEffect } from 'react';
+import Login from './Login';
+import ContactUs from './ContactUs';
 
-import './App.css';
-import React from 'react';
-import Weather from './Weather'; // Make sure the path is correct
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-function App() {
+  useEffect(() => {
+    const session = localStorage.getItem('isLoggedIn');
+    if (session === 'true') {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('isLoggedIn', 'true');
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-100">
-      <Weather />
+    <div>
+      {isLoggedIn ? (
+        <ContactUs onLogout={handleLogout} />
+      ) : (
+        <Login onLogin={handleLogin} />
+      )}
     </div>
   );
-}
+};
 
 export default App;
 
